@@ -1,0 +1,83 @@
+@keyframes fade {
+  0%{
+    opacity: 0;
+    padding-top: 3em;
+    
+  }
+  100%{
+    opacity: 1;
+    padding-top: 0em;
+    
+
+  }
+}
+
+@keyframes slideFromRight {
+  0%{
+    opacity: 0;
+    padding-right: 4em;
+  }
+  100%{
+    opacity: 1;
+
+  }
+}
+:root{
+
+  /*Color*/
+  --lightviolet-color:#e2d1ed ;
+  --violet-color: #6b00ad;
+  --darkviolet-color: #3c0161;
+  --white-color: #fff;
+
+  --set-animation: fade 1s ease-in  ;
+  --set-animation2: slideFromRight 1s ease-in  ;
+  --set-transition : ease .4s ;
+}
+
+.title{
+  font-size: 5.5em;
+  color:  var(--darkviolet-color);
+}
+
+a{
+  color:var(--darkviolet-color);
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--set-transition);
+
+}
+
+a:hover{
+  color:var(--lightviolet-color);
+}
+.card-bg-header{
+  background-color: var(--lightviolet-color);
+}
+
+span{
+  color: var(--violet-color)
+}
+
+h5{
+  color: var(--darkviolet-color);
+}
+
+.btn-bg{
+  background-color: var(--darkviolet-color);
+  color: var(--white-color);
+}
+
+.animation{
+  animation: var(--set-animation)  ;
+}
+
+.animation2{
+  animation: var(--set-animation2)  ;
+}
+
+@media screen and (max-width:768px) {
+  .title{
+    font-size: 3em;
+  }
+}
