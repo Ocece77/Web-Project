@@ -10,6 +10,7 @@ Feel free to explore these projects and use them as a resource to learn and impr
 
 1. [Project 1: Random Joke Generator](/joke_generator)
    - Description: A Random Joke Generator using the API of JokeAPI 
+   Made with HTML , CSS , Boostrap5 and Javascript
   
 ## 🤝 Contributions
 
