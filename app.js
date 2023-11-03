@@ -6,7 +6,7 @@ const projects = [
     name : "Meme generator",
     desc : "An online tool for creating amusing memes using personalized images and text",
     link : "joke_generator/index.html",
-    img : "joke_generator/img/emoji_laugh.png",
+    img : "joke_generator/img/design.png",
     done : true
 
   },
@@ -15,7 +15,7 @@ const projects = [
     name : "Weather App",
     desc : "Not available yet",//"An application that provides real-time weather information for any city in the world.",
     link : "",
-    img : "",
+    img : "image/no_available.jpeg",
     done : false
 
   },
@@ -25,7 +25,7 @@ const projects = [
     name : "Random Quote App",
     desc : "Not available yet",//"An app that displays inspiring or funny quotes randomly with each visit.",
     link : "",
-    img : "",
+    img : "image/no_available.jpeg",
     done : false
 
   },
@@ -35,7 +35,7 @@ const projects = [
     name : "Dictionary App",
     desc : "Not available yet",//"A reference application that allows you to quickly look up word definitions and obtain linguistic information.",
     link : "",
-    img : "",
+    img : "image/no_available.jpeg",
     done : false
 
   },
@@ -58,7 +58,8 @@ window.addEventListener("DOMContentLoaded", ()=>{
 
     return `<div class="col">
   <div class="card d-none shadow" id="${project.id}">
-    <h5 class="card-header card-bg-header">${project.name}</h5>
+    <h5 class="card-header card-bg-header ">${project.name}</h5>
+    <img src="${project.img}" alt="project preview image" class="card-img-top ">
     <div class="card-body">
       <p class="card-text" >${project.desc}</p>
       <a href="${project.link}" target="_blank" class="btn btn-bg text-light shadow ${status}">See the project</a>

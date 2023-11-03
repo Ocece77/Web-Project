@@ -1,10 +1,15 @@
 
 
-# 😊 My Web Application Portfolio
+# 🧇 My Web Application Portfolio 🧇
 
 This repository is a portfolio listing various web application projects that I have created. Each project is briefly described below. Click on the links to access the individual projects. 😃
 
 Feel free to explore these projects and use them as a resource to learn and improve your dev skills.
+
+You can go to the Home page where I list all of my projects ! 
+Here the links ✨ : 
+
+- https://ocece77.github.io/Web-Project/
 
 ## 📋 List of Projects
 
