@@ -1,0 +1,122 @@
+@keyframes fade {
+  0%{
+    opacity: 0;
+    
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes colorChange{
+  0%{
+    background-color: inherit;
+  }
+  100%{
+    background-color: var(--color-darkbluegreen);
+  }
+}
+
+
+:root{
+
+  /*main color*/
+  --color-lightbluegreen: rgb(200, 226, 234);
+  --color-bluegreen: rgb(96, 160, 166);
+  --color-darkbluegreen:rgb(27, 78, 84);
+  --color-white: #fff;
+
+  /*animation*/
+  --fadein-animation : fade 1s ease;
+  --fadeout-animation : fade 1s ease reverse ;
+  --colorchange-animation : colorChange 2s ease-in  ;
+
+  /*transition*/
+  --main-transition: .4s ease;
+}
+
+html,
+body{
+  background-color:var(--color-lightbluegreen) ;
+  height: 100%;
+}
+
+.btn-started{
+  background-color: var(--color-darkbluegreen) ;
+  color: var(--color-white);
+  border :none;
+  border-radius: 1em;
+  letter-spacing: .2em;
+  font-weight: 200;
+  box-shadow: 5px 5px 20px var(--color-darkbluegreen);
+  transition: var(--main-transition);
+}
+
+.btn-started:hover{
+  background-color: var(--color-bluegreen);
+  cursor: pointer;
+}
+
+#home-title{
+  font-size: 5rem;
+  color: var(--color-darkbluegreen);
+}
+
+a{
+  color: var(--color-bluegreen);
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+a:hover{
+  color: var(--color-darkbluegreen);
+}
+
+
+.weather-container{
+  background-color: rgb(255, 255, 255 , .2);
+  border: solid 1px var(--color-white);
+}
+
+.btn-search{
+  background-color: var(--color-lightbluegreen) ;
+  color: var(--color-white);
+  box-shadow: 2px 2px 10px var(--color-darkbluegreen);
+}
+
+#weather-info > h1{
+  font-size: 3rem;
+  color: var(--color-darkbluegreen);
+}
+
+.weather-content > h1{
+  text-transform: capitalize;
+  font-size: 4rem;
+  color: var(--color-lightbluegreen);
+  margin-bottom: -.05em;
+}
+
+
+.weather-content > h2{
+  text-transform: capitalize;
+  font-size: 5rem;
+  color: var(--color-lightbluegreen);
+}
+.weather-content > .row > .col-md-4 > p{
+  font-size: .7em;
+  font-weight: bold;
+}
+
+/*Animation*/
+.fade-in{
+  animation: var(--fadein-animation);
+}
+
+.fade-out{
+  animation: var(--fadeout-animation);
+}
+
+.color-change{
+  animation:var(--colorchange-animation);
+}
