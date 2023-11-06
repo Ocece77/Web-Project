@@ -13,10 +13,10 @@ const projects = [
   {
     id : 2,
     name : "Weather App",
-    desc : "Not available yet",//"An application that provides real-time weather information for any city in the world.",
-    link : "",
-    img : "image/no_available.jpeg",
-    done : false
+    desc : "An application that provides real-time weather information for any city in the world.",
+    link : "weather_app/index.html",
+    img : "weather_app/img/design.png",
+    done : true
 
   },
 
