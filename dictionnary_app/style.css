@@ -1,0 +1,36 @@
+:root{
+    /*main color*/
+  --main-color :#cc6e7f;
+  --color-white: #fff;
+
+  /*animation*/
+  --fadein-animation : fade 1s ease;
+
+  /*transition*/
+  --main-transition: .4s ease;
+}
+
+html,
+body{
+  background-color: var(--main-color);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.bg-color{
+  background-color: var(--main-color);
+}
+
+.text-main{
+  color: var(--main-color);
+}
+
+.vertical-bar{
+  background-color: var(--main-color);
+  height: 1.4em;
+  content: "";
+  width: .3em;
+}
