@@ -20,6 +20,10 @@ Here the links ✨ :
 2. [Project 2: Weather Web Application](/weather_app)
    - Description: A Weather app where you can display any weather using open weather API
    Made with HTML , CSS , Boostrap5 and Javascript
+
+3. [Project 3: Dictionnary Web Application](/dictionnary_app)
+   - Description:A reference application that allows you to quickly look up word definitions and obtain linguistic information.
+   Made with HTML , CSS , Boostrap5 and Javascript
   
 ## 🤝 Contributions
 

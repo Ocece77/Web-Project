@@ -33,10 +33,10 @@ const projects = [
   {
     id : 4,
     name : "Dictionary App",
-    desc : "Not available yet",//"A reference application that allows you to quickly look up word definitions and obtain linguistic information.",
-    link : "",
+    desc : "A reference application that allows you to quickly look up word definitions and obtain linguistic information.",
+    link : "dictionnary_app/dictionnary_app.html",
     img : "image/no_available.jpeg",
-    done : false
+    done : true
 
   },
 
