@@ -6,8 +6,8 @@ const dictionnaryApiUrl ="https://api.dictionaryapi.dev/api/v2/entries/en/";
 
 searchBtn.addEventListener("click", ()=>{
   let userInput = document.getElementById("word");
-  let url = `https://api.dictionaryapi.dev/api/v2/entries/en/`
-   fetch(url+ userInput.value)
+  let url = 'https://corsproxy.io/?' + encodeURIComponent(`https://api.dictionaryapi.dev/api/v2/entries/en/${userInput.value}`);
+   fetch(url)
    .then(resp => resp.json())
    .then(data =>{
     definitionDiv.innerHTML =`
@@ -27,6 +27,6 @@ searchBtn.addEventListener("click", ()=>{
       </div>
     `
    } )
-   .catch(()=> console.log("error"))
+   .catch(()=> console.log())
    
 })
