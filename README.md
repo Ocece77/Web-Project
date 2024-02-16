@@ -16,6 +16,10 @@ Here the links ✨ :
 1. [Project 1: Random Joke Generator](/joke_generator)
    - Description: A Random Joke Generator using the API of JokeAPI 
    Made with HTML , CSS , Boostrap5 and Javascript
+
+2. [Project 2: Weather Web Application](/weather_app)
+   - Description: A Weather app where you can display any weather using open weather API
+   Made with HTML , CSS , Boostrap5 and Javascript
   
 ## 🤝 Contributions
 
