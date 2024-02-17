@@ -1,13 +1,37 @@
+@keyframes fade {
+  0%{
+    opacity: 0;
+    padding-top: 3em;
+  }
+}
+
+@keyframes moveOut {
+  0%{
+    opacity: 1;
+
+  }
+  100%{
+    opacity: 0;
+    padding-left: 20em;
+  }
+}
+
+@keyframes slideFade {
+  0%{
+    opacity: 0;
+    padding-left: 3em;
+  }
+}
+
 :root{
     /*main color*/
   --main-color :#cc6e7f;
   --color-white: #fff;
 
   /*animation*/
-  --fadein-animation : fade 1s ease;
-
-  /*transition*/
-  --main-transition: .4s ease;
+  --fadein-animation : fade 1.2s ease;
+  --moveout-animation : moveOut .6s ease-in;
+  --slidefade-animation : slideFade 1.2s ease-out;
 }
 
 html,
@@ -33,4 +57,24 @@ body{
   height: 1.4em;
   content: "";
   width: .3em;
+}
+
+.horizontal-bar{
+  background-color: var(--main-color);
+  height:.05em;
+  content: "";
+  width:  20em;
+
+}
+
+.fade-animation{
+  animation:var(--fadein-animation);
+}
+
+.moveout-animation{
+  animation:var(--moveout-animation);
+}
+
+.slidefade-animation{
+  animation:var(--slidefade-animation);
 }

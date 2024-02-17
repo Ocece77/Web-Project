@@ -18,30 +18,35 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body >
-   
-  <div class="h-100 w-100 d-flex justify-content-center align-items-center">
 
-    <div class="container bg-light p-5 rounded shadow" style="width: 35em ;">
+    <div class="container col" id="app-presentation">
+      <h1 class="text-light fw-bold  " >Urban Dictionnary</h1>
+      <p class="fst-italic text-light " >A reference application that allows you to quickly look up word definitions and obtain linguistic information.</p>
+      <button type="button" class="btn btn-default fw-bold text-main bg-light " id="app-btn" >Try it !</button>
+    </div>
+
+
+    <div class="container bg-light p-5 rounded shadow d-none" id="def-container" style="width: 35em ;">
       <div class="row mb-5">
         <div class="col">
         <div class="input-group mb-3">
           <input type="text"  class="form-control p-3" placeholder="Enter a word" name="word" id="word" aria-describedby="searching-btn">
-          <button type="button"  class="input-group-text  bg-color text-light fw-bold" id="searching-btn">search <i class="fas fa-search" style="color: #ffffff;"></i></button>
+          <button type="button"  class="input-group-text  bg-color text-light fw-bold  " id="searching-btn">search</button>
         </div>
         </div>
       </div>
 
       
       <div class="row" id="word-definition">
-  
+  <!--generate code with javascript-->
     </div>
     
 
-  </div>
+
   
 <!--Script js -->
 <script src="app.js"></script>
-
+<script src="animation.js"></script>
 </body>
 
 </html>
