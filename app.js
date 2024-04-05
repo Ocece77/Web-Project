@@ -105,8 +105,5 @@ setTimeout(() =>{
             subtitle.classList.remove("d-none") ,
             subtitle.classList.add("animation")} , 1500);
 
-
-
-
 });
 

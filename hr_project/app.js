@@ -1,5 +1,5 @@
 
-//Obtenir le prénom de l'utilsateur 
+//obtention du prénom
 
 const inputPrenom = document.getElementById("input-prenom");
 const btnPrenom = document.getElementById("btn-prenom");
@@ -50,7 +50,7 @@ const messageText  = document.getElementById("message-text");
 let i = 0;
 
 let generateMessage = () =>{
-  messageText.classList.add("fade");
+  messageText.classList.add("fading");
       if ( i > messages.length - 1){
         i = 0
         messageText.innerHTML = (messages[i].text.length) < 110  ? `${messages[i].text}` :  `${messages[i].text.slice(0, 110)}...`;
@@ -60,7 +60,7 @@ let generateMessage = () =>{
       }
       
     setTimeout(()=>{
-      messageText.classList.remove("fade");
+      messageText.classList.remove("fading");
     },500)
 
    }
@@ -160,9 +160,9 @@ const date = new Date()
   getName();
   console.log()
   askName.classList.add("d-none");
+  mainContainer.classList.add("fading");
   navContainer.classList.remove("d-none");
   mainContainer.classList.remove("d-none");
-
 })
 
 })

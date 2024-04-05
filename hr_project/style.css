@@ -2,11 +2,13 @@
   0%{
     opacity: 0;
   }
-  
   100%{
     opacity: 1;
+
   }
 }
+
+
 :root{
 
   /*main color*/
@@ -18,15 +20,16 @@
   --color-lightgray : #f1f0f0;
 
   /*animation*/
-  --fade-animation : fade .5s ease;
+  --fade-animation : fade 1s ease-out ;
+
   /*transition*/
   --main-transition: .4s ease;
+  
 }
 
 html,
 body{
   height: 100%; 
-
 }
 
 .rounded-extra{
@@ -35,20 +38,20 @@ body{
 
 
 .bg-nightblue{
-  background-color: var( --color-nightblue );
+  background-color: var(--color-nightblue);
 }
 
 .bg-pinklight{
-  background-color: var(  --color-pinklight );
+  background-color: var(--color-pinklight);
 }
 
 .text-nightblue{
-  color: var(   --color-nightblue );
+  color: var(--color-nightblue);
 }
 
 
 .text-purplelight{
-  color: var(    --color-purplelight);
+  color: var(--color-purplelight);
 }
 
 .badge{
@@ -58,9 +61,9 @@ body{
 .bg-motif{
   background: var(--color-purplelight) url("image/bg.jpg")   ;
 }
+
 .heightcontent{
   height: fit-content;
-
 }
 
 .text-white{
@@ -71,14 +74,21 @@ body{
   color: var(--color-bluegray);
 }
 
-.fade{
-  animation: var(--fade-animation);
-}
-
 .btn:hover , .badge:hover{
   background-color: var(--color-bluegray);
 }
 
+/*animation*/
+.fading{
+  animation: var(--fade-animation);
+}
+
+.slideright{
+  animation: var(--slideright-animation);
+}
+
+
+/*media query*/
 
 @media only screen and (max-width: 992px) {
   .rounded-extra{
