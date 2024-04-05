@@ -1,0 +1,79 @@
+
+:root{
+
+  /*main color*/
+  --color-nightblue :  #271651;
+  --color-purplelight :  #aba0c7;
+  --color-pinklight : #c7a0c3;
+  --color-bluegray: #9fbee5;
+  --color-white: #fff;
+  --color-lightgray : #f1f0f0;
+
+  /*animation*/
+
+  /*transition*/
+  --main-transition: .4s ease;
+}
+
+html,
+body{
+  height: 100vh; 
+  width: 100vw;
+
+
+}
+
+.rounded-extra{
+  border-radius:1.2em;
+}
+
+
+.bg-nightblue{
+  background-color: var( --color-nightblue );
+}
+
+.bg-pinklight{
+  background-color: var(  --color-pinklight );
+}
+
+.text-nightblue{
+  color: var(   --color-nightblue );
+}
+
+
+.text-purplelight{
+  color: var(    --color-purplelight);
+}
+
+.badge{
+  background-color: var(--color-pinklight);
+}
+
+.bg-motif{
+  background: var(--color-purplelight) url("image/bg.jpg")   ;
+}
+.heightcontent{
+  height: fit-content;
+    overflow: hidden;
+}
+.text-white{
+  color: var(--color-white);
+}
+
+.nav-link:hover {
+  color: var(--color-bluegray);
+}
+
+
+
+.btn:hover , .badge:hover{
+  background-color: var(--color-bluegray);
+}
+
+
+@media only screen and (max-width: 992px) {
+  .rounded-extra{
+    border-radius: 0em;
+  }
+  
+}

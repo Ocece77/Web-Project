@@ -49,6 +49,7 @@ let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&
 fetch(url)
   .then(resp => resp.json())
   .then(data =>{
+    console.log(data)
     weatherInfo.innerHTML = ` 
     <div class="weather-content col-8 fade-in">
       <h1>${cityInput.value}</h1>
