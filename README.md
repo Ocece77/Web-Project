@@ -24,6 +24,10 @@ Here the links ✨ :
 3. [Project 3: Dictionnary Web Application](/dictionnary_app)
    - Description:A reference application that allows you to quickly look up word definitions and obtain linguistic information.
    Made with HTML , CSS , Boostrap5 and Javascript
+
+4. [Project 4: Human ressources website](/hr_project)
+   - Description: I created the main landing page of a human ressources website for a stage application
+   Made with HTML , CSS , Boostrap5 and Javascript
   
 ## 🤝 Contributions
 
