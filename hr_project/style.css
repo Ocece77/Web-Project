@@ -1,4 +1,12 @@
-
+@keyframes fade {
+  0%{
+    opacity: 0;
+  }
+  
+  100%{
+    opacity: 1;
+  }
+}
 :root{
 
   /*main color*/
@@ -10,15 +18,15 @@
   --color-lightgray : #f1f0f0;
 
   /*animation*/
-
+  --fade-animation : fade .5s ease;
   /*transition*/
   --main-transition: .4s ease;
 }
 
 html,
 body{
-  height: 100vh; 
-  width: 100vw;
+  height: 100%; 
+
 }
 
 .rounded-extra{
@@ -52,6 +60,7 @@ body{
 }
 .heightcontent{
   height: fit-content;
+
 }
 
 .text-white{
@@ -62,7 +71,9 @@ body{
   color: var(--color-bluegray);
 }
 
-
+.fade{
+  animation: var(--fade-animation);
+}
 
 .btn:hover , .badge:hover{
   background-color: var(--color-bluegray);
