@@ -40,6 +40,15 @@ const projects = [
 
   },
 
+  {
+    id : 5,
+    name : "Human ressources tools",
+    desc : "I created the main landing page of a human ressources website for a stage application",
+    link : "hr_project/index.html",
+    img : "hr_project/image/design.png",
+    done : true
+  },
+
 ]
 
 

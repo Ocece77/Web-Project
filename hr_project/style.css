@@ -60,7 +60,7 @@ body{
   color: var(--color-white);
 }
 
-.nav-link:hover {
+.nav-link:hover, .text-white:hover {
   color: var(--color-bluegray);
 }
 
