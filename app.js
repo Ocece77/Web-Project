@@ -23,10 +23,10 @@ const projects = [
   {
     id : 3,
     name : "Random Quote App",
-    desc : "Not available yet",//"An app that displays inspiring or funny quotes randomly with each visit.",
-    link : "",
-    img : "image/no_available.jpeg",
-    done : false
+    desc : "This Random Quote App is a web application designed to display random quotes to users",
+    link : "quote_generator/index.html",
+    img : "quote_generator/image/design.png",
+    done : true
 
   },
 
@@ -49,6 +49,16 @@ const projects = [
     done : true
   },
 
+  {
+    id : 6,
+    name : "calculatrice",
+    desc : "Not available yet",//"An app that displays inspiring or funny quotes randomly with each visit.",
+    link : "",
+    img : "image/no_available.jpeg",
+    done : false
+
+  },
+
 ]
 
 
@@ -66,9 +76,9 @@ window.addEventListener("DOMContentLoaded", ()=>{
     let status = project["done"] == false ? "disabled" : ""
 
     return `<div class="col">
-  <div class="card d-none shadow" id="${project.id}">
+  <div class="card d-none shadow h-100" id="${project.id}">
     <h5 class="card-header card-bg-header ">${project.name}</h5>
-    <img src="${project.img}" alt="project preview image" class="card-img-top ">
+    <img src="${project.img}" alt="project preview image" class="card-img-top  ">
     <div class="card-body">
       <p class="card-text" >${project.desc}</p>
       <a href="${project.link}" target="_blank" class="btn btn-bg text-light shadow ${status}">See the project</a>
