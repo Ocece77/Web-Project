@@ -1,0 +1,37 @@
+:root{
+  --color-purple : #4D3284;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+html, body{
+  background-color: var(--color-purple);
+  height: 100%;
+
+}
+
+.btn{
+  background-color: var(--color-purple);
+  border:none;
+}
+
+
+@keyframes fade {
+
+  0%{
+     opacity: 0;
+     transform: translateX(-5%);
+  }
+
+  100%{
+   opacity: 1;
+  }
+}
+
+.fade-anim{
+  animation: fade 1s ease-in-out;
+}
