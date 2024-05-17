@@ -21,13 +21,19 @@ Here the links ✨ :
    - Description: A Weather app where you can display any weather using open weather API
    Made with HTML , CSS , Boostrap5 and Javascript
 
-3. [Project 3: Dictionnary Web Application](/dictionnary_app)
+4. [Project 3: Random Quote Generator](/quote_generator)
+   - Description: This Random Quote App is a web application designed to display random quotes to users using ninja api ! 
+   Made with HTML , CSS , Boostrap5 and Javascript
+
+4. [Project 4: Dictionnary Web Application](/dictionnary_app)
    - Description:A reference application that allows you to quickly look up word definitions and obtain linguistic information.
    Made with HTML , CSS , Boostrap5 and Javascript
 
-4. [Project 4: Human ressources website](/hr_project)
+5. [Project 5: Human ressources website](/hr_project)
    - Description: I created the main landing page of a human ressources website for a stage application
    Made with HTML , CSS , Boostrap5 and Javascript
+
+
   
 ## 🤝 Contributions
 
