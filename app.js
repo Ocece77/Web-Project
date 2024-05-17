@@ -75,7 +75,7 @@ window.addEventListener("DOMContentLoaded", ()=>{
 
     let status = project["done"] == false ? "disabled" : ""
 
-    return `<div class="col">
+    return `<div class="col-md-4 col-sm-12">
   <div class="card d-none shadow h-100" id="${project.id}">
     <h5 class="card-header card-bg-header ">${project.name}</h5>
     <img src="${project.img}" alt="project preview image" class="card-img-top  ">
