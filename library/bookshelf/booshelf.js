@@ -30,7 +30,7 @@ const domBookList = () => {
 
      for (const [key, val] in book){
         return`
-       <div class="col-12 col-md-4 col-sm-12 bg-dark text-light rounded  px-4 py-3" >
+       <div class="col-12 col-md- col-sm-12 bg-dark text-light rounded  px-4 py-3" >
 
        <div class="row d-flex justify-content-between ">
 

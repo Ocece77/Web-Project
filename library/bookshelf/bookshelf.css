@@ -10,3 +10,17 @@ html, body{
 :root{
   --color-safflowerOrange:#FDAE44;
 }
+
+@keyframes fadeIn {
+  from{
+  opacity: 0;
+  }
+
+  to{
+   opacity: 1;
+  }
+}
+
+.fade-in{
+  animation: fadeIn .5s ease-in;
+}

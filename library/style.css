@@ -6,3 +6,24 @@ html, body{
   box-sizing: border-box;
 }
 
+img{
+  object-fit: contain;
+}
+
+h1{
+  font-size: 6em !important;
+}
+
+@keyframes fadeIn {
+  from{
+  opacity: 0;
+  }
+
+  to{
+   opacity: 1;
+  }
+}
+
+.fade-in{
+  animation: fadeIn .5s ease-in;
+}
