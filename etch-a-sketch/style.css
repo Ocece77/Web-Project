@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html, body , .container{
+  height: 100vh;
+  width: 100vw;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*container in the top*/
+.container-top{
+  padding: 3em;
+}
+
+.container-controls{
+  display: flex;
+  flex-direction: column;
+}
+
+.container-title >h1{
+text-align: center;
+margin-bottom: .4em;
+font-size: 3em;
+}
+
+form{
+  margin-bottom: 1em;
+}
+
+form > input[type="number"]{
+  width: 70%;
+}
+
+form > input[type="submit"]{
+  width: 26%;
+}
+
+
+input[type="color"]{
+  width: 100%;
+}
+
+label{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+.container-controls-btns{
+  display: grid;
+  grid-template-columns: repeat(2 ,1fr);
+  gap: 5px;
+}
+
+button , input[type="submit"]{
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 2px;
+  color: white;
+  background-color: black;
+  font-weight: 600;
+}
+
+.container-status{
+  margin-bottom: 5px;
+}
+
+
+.container-draw{
+  height: 40vw;
+  min-width: 40vw;
+  max-width: 45vw;
+  display: grid;
+  overflow: hidden;
+}
+
+.container-draw-cube{
+  border: .5px solid black;
+}
+
+

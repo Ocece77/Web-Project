@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Etch-a-sketch</title>
+</head>
+
+<body>
+  
+  <div class="container">
+
+      <div class="container-top">
+
+          <div class="container-title">
+            <h1>Etch-a-sketch</h1>
+          </div>
+
+          <div class="container-controls">
+
+              <form name="gridRangeForm" id="gridRangeForm">
+                <input type="number" name="gridrange" id="gridrange" value="16" >
+                <input type="submit" value="apply">
+              </form>
+
+                <div class="container-controls-color">
+                  <label for="color">Choose your color: </label>
+                  <input type="color" name="color" id="color" value="#484FEE">
+                </div>
+
+              <div class="container-controls-btns">
+                <button id="multicolor">multicolor</button>
+                <button id="eraser">eraser</button>
+              </div>
+
+          </div>
+
+        </div>
+      
+      <div class="container-status">
+          <p class="container-status-text">The pen color is #484FEE</p>
+         </div>
+
+      <div class="container-draw">
+          <!--Cube generated in javascript-->
+         </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -62,7 +62,7 @@ const projects = [
   {
     id : 7,
     name : "Library",
-    desc : "With Bookshelf, you can store books you've read, are currently reading, or plan to read",
+    desc : "With this library made in vanilla JS, you can store books you've read, are currently reading, or plan to read",
     link : "library/index.html",
     img : "library/image/design.png",
     done : true
