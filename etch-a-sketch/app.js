@@ -8,6 +8,7 @@ const gridRangeForm = document.querySelector('form');
     hexLetter = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F']
     multicolorMode = false
     eraserMode = false
+    gridLessBtn  = document.getElementById('gridless');
 
 
 
@@ -90,5 +91,16 @@ gridRangeForm.addEventListener('submit', (e)=>{
 })
 
 
+let state = true
 
+gridLessBtn.addEventListener('click',() =>{
+  state = !state
+
+  const cubes = document.querySelectorAll(".container-draw-cube");
+  cubes.forEach((cube) => {
+      cube.style.border = state ? ".3px solid rgba(0, 0, 0, 0.196)" : "none"
+  });
+
+  containerDraw.style.border = state ? "none" :".3px solid rgba(0, 0, 0, 0.196)"
+}) 
 

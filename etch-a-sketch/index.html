@@ -21,7 +21,7 @@
           <div class="container-controls">
 
               <form name="gridRangeForm" id="gridRangeForm">
-                <input type="number" name="gridrange" id="gridrange" value="16" >
+                <input type="number" name="gridrange" id="gridrange" value="16" min="1" max="100">
                 <input type="submit" value="apply">
               </form>
 
@@ -33,6 +33,7 @@
               <div class="container-controls-btns">
                 <button id="multicolor">multicolor</button>
                 <button id="eraser">eraser</button>
+                <button id="gridless">Remove grid</button>
               </div>
 
           </div>
@@ -40,7 +41,7 @@
         </div>
       
       <div class="container-status">
-          <p class="container-status-text">The pen color is #484FEE</p>
+          <p class="container-status-text">The pen color is <span style="color:#484FEE">#484FEE</span></p>
          </div>
 
       <div class="container-draw">
