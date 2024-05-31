@@ -69,6 +69,16 @@ const projects = [
 
   },
 
+  {
+    id : 8,
+    name : "Etch-a-sketch",
+    desc : "Draw something with a large palette of color . Made with Javascript , HTML and CSS ",
+    link : "etch-a-sketch/index.html",
+    img : "etch-a-sketch/image/design.png",
+    done : true
+
+  },
+
 ]
 
 
