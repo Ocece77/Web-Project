@@ -76,7 +76,6 @@ const projects = [
     link : "etch-a-sketch/index.html",
     img : "etch-a-sketch/image/design.png",
     done : true
-
   },
 
 ]

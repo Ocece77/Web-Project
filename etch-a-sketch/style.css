@@ -15,6 +15,7 @@ html, body , .container{
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 3em;
 }
 
 /*container in the top*/
@@ -33,12 +34,69 @@ margin-bottom: .4em;
 font-size: 3em;
 }
 
+.container-title >h1 > span:first-of-type{
+  color: #ff3939;
+}
+
+.container-title >h1 > span:nth-of-type(2){
+  color: #66CC66;
+}
+
+.container-title >h1 > span:nth-of-type(3){
+  color: #FF9966;
+}
+
+.container-title >h1 > span:nth-of-type(4){
+  color: #ffd0e3;
+}
+
+.container-title >h1 > span:nth-of-type(5){
+  color: #99d1ff;
+}
+
+.container-title >h1 > span:nth-of-type(6){
+  color: #ffdb99;
+}
+
+.container-title >h1 > span:nth-of-type(7){
+  color: #cbfff0;
+}
+
+.container-title >h1 > span:nth-of-type(8){
+  color: #afc3ff;
+}
+
+.container-title >h1 > span:nth-of-type(9){
+  color: #d8ffaf;
+}
+
+.container-title >h1 > span:nth-of-type(10){
+  color: #ffafd6;
+}
+
+.container-title >h1 > span:nth-of-type(11){
+  color: #aff4ff;
+}
+
+.container-title >h1 > span:nth-of-type(11){
+  color: #ff2516;
+}
+
+.container-title >h1 > span:nth-of-type(12){
+  color: #b0eeea;
+}
+
+.container-title >h1 > span:nth-of-type(13){
+  color: #fff75d;
+}
 form{
   margin-bottom: 1em;
 }
 
 form > input[type="number"]{
   width: 70%;
+  font-size: 1em;
+  height: 1.7em;
 }
 
 form > input[type="submit"]{
@@ -78,9 +136,8 @@ button , input[type="submit"]{
 
 
 .container-draw{
-  height: 40vw;
-  min-width: 40vw;
-  max-width: 45vw;
+  height:50vw;
+  min-width: 30vw;
   display: grid;
   overflow: hidden;
 }
@@ -90,3 +147,13 @@ button , input[type="submit"]{
 }
 
 
+
+@media only screen and (max-width: 992px) {
+
+  .container-draw{
+      height:90vw;
+      min-width: 85vw;
+  }
+    
+  
+}
