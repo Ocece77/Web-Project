@@ -1,9 +1,12 @@
 const modifyForm = document.getElementById("modifyform");
       addForm = document.getElementById("addform");
-      bookItems = document.getElementById("bookitems")
+      bookItems = document.getElementById("bookitems");
+      allBtn = document.getElementById("allBtn");
       readingBtn = document.getElementById("readingBtn");
       toReadBtn = document.getElementById("toReadBtn");
       finishedBtn = document.getElementById("finishedBtn");
+
+      searchBar = document.querySelector('input[type="search"]');
 
 /*Object for books */
 function Book( title , author ,description, pages , status ) {
@@ -15,80 +18,73 @@ function Book( title , author ,description, pages , status ) {
 }
 
 /*Object default books for test */
-const harryp = new Book("Harry Potter" , "J.K Rowling" , "Dans la chambre des Secrets vit un basilic, énorme serpent qui a le pouvoir de tuer ceux qui le regardent et de pétrifier ceux qui ne le voient pas directement" , 653, "To Read")
-const tolkien = new Book("Le Seigneur des anneaux " , " J. R. R. Tolkien" , "renant place dans le monde fictionnel de la Terre du Milieu, il suit la quête du hobbit Frodon Sacquet," , 890, "To Read")
-
+const harryPotter = new Book("Harry Potter" , "J.K Rowling" , "Dans la chambre des Secrets vit un basilic, énorme serpent qui a le pouvoir de tuer ceux qui le regardent et de pétrifier ceux qui ne le voient pas directement" , 653, "To Read")
+const lordOfTheRings = new Book("Le Seigneur des anneaux " , " J. R. R. Tolkien" , "renant place dans le monde fictionnel de la Terre du Milieu, il suit la quête du hobbit Frodon Sacquet," , 890, "Finished")
+const livingDiffently = new Book("Habiter Autrement " , "Maryse Quinton" , "Habiter autrement propose d’explorer d’autres façons d’habiter, plus ouvertes, plus libres, plus permissives. " , 240, "Reading")
 /*array of books */
-let booksList = [harryp,tolkien]
+let booksList = [harryPotter,lordOfTheRings ,livingDiffently ]
 
 
 const domBookList = () => {
   
 /*Generate the books but in the html */
 
-  const list = booksList.map((book)=>{
+const list = booksList.map((book)=>{
 
      for (const [key, val] in book){
         return`
-       <div class="col-12 col-md-4 col-sm-12 bg-dark text-light rounded  px-4 py-3" >
+       <div class="col-12 col-lg-4 col-md-6 col-sm-12  book-card mb-4 "  data-status="${book["status"]}" data-title="${book["title"]}">
 
-       <div class="row d-flex justify-content-between ">
+       <div class="bg-dark text-light rounded px-4 py-3 h-100">
+       
+          <div class="row d-flex justify-content-between ">
+                <div class="col-8">
+                  <h2 class="text-decoration-underline text-capitalize">${book["title"]}</h2>
+                </div>
 
-        <div class="col-8">
-          <h2 class="text-decoration-underline text-capitalize">${book["title"]}</h2>
-        </div>
+                <div class="col-3">
+                  <p class="badge bg-warning ">${book["status"]}</p>
+                </div>
+              </div>
 
-        <div class="col-3">
-          <p class="badge bg-warning">${book["status"]}</p>
-        </div>
+                  <p class="text-capitalize">${book["author"]}</p>
+                  <p>${book["description"]}</p>
+                  <div class="row d-flex justify-content-between">
 
-       </div>
+              
+                <div class="col-6">
+                  <p class="fw-bolder">${book["pages"]} pages</p>
+                </div>
 
-       <p class="text-capitalize">${book["author"]}</p>
-       <p>${book["description"]}</p>
-       <div class="row d-flex justify-content-between">
+            <div class="col-6  d-flex justify-content-end gap-3">
+            <button class="btn btn-outline-danger remove" data-id='${book["title"]}'> Delete</button>
+            <button class="btn btn-outline-light modify" data-id='${book["title"]}' data-bs-toggle="modal" data-bs-target="#modifyModal"> Modify</button>
+            </div>
+
+          </div>
+      </div>
 
        
-         <div class="col-6">
-           <p class="fw-bolder">${book["pages"]} pages</p>
-         </div>
-
-         <div class="col-6  d-flex justify-content-end gap-3">
-         <button class="btn btn-outline-danger remove" data-id='${book["title"]}'> Delete</button>
-         <button class="btn btn-outline-light modify" data-id='${book["title"]}' data-bs-toggle="modal" data-bs-target="#modifyModal"> Modify</button>
-         </div>
-
-       </div>
      </div>
+
      `
      };
+
    }).join('')
-   bookItems.innerHTML = list
-
-    readingBtn.addEventListener('click', ()=>{
-    booksList.map((book) => book["status"] == "Reading")
-    domBookList()
-  })
-
-  toReadBtn.addEventListener('click', ()=>{
-    booksList.map((book) => book["status"] == "To Read")
-    domBookList()
-  })
-  
-  finishedBtn.addEventListener('click', ()=>{
-    booksList.map((book) => book["status"] == "Finished")
-    domBookList()
-  })
+   bookItems.innerHTML = booksList.length != 0 ? list : "<p class=\"text-center text-muted mx-auto\"> They are no books in your bookshelf </br> Click on <a data-bs-target=\"#addModal\" data-bs-toggle=\"modal\" style=\"color : #ffc677 \" class=\"text-decoration-underline \">\"add Book\"</a> to add one</p>"
+   console.log(booksList)
+ 
    
+
 /*Remove btn */
-   var removeBtn = document.querySelectorAll(".remove");
+  var removeBtn = document.querySelectorAll(".remove");
    removeBtn.forEach((btn)=>{
     btn.addEventListener("click", (e)=>{
       booksList = booksList.filter((book) => book["title"] != e.currentTarget.dataset.id)
-      console.log(booksList[0])
       domBookList()
      })
   })
+
 
 /*modify btn */
   var modifyBtn = document.querySelectorAll(".modify");
@@ -117,7 +113,7 @@ const domBookList = () => {
 
     <div class="mb-3">
       <label for="title" class="form-label">pages</label>
-      <input type="text" name="pages" value="${modifyBook[0]["pages"]}"  class="form-control" id="pages" aria-describedby="pagesNumber">
+      <input type="number" name="pages" value="${modifyBook[0]["pages"]}"  class="form-control" id="pages" aria-describedby="pagesNumber">
     </div>
 
     <div class="mb-3">
@@ -166,11 +162,42 @@ const domBookList = () => {
     
   })
 
-  
-
  }
- 
 
+ searchBar.addEventListener('keyup', ()=>{
+  const BookShelfBooks = document.querySelectorAll('.book-card');
+  let pattern = new RegExp(`(${searchBar.value})`, 'gi');
+  BookShelfBooks.forEach((book) => book.dataset.title.match(pattern) ? book.classList.remove('d-none') : book.classList.contains('d-none') ? "" : book.classList.add('d-none') )
+ })
+
+ readingBtn.addEventListener('click', ()=>{
+  const BookShelfBooks = document.querySelectorAll('.book-card');
+  BookShelfBooks.forEach((book) => book.dataset.status != "Reading" ? book.classList.add("d-none") :  bbook.classList.remove("d-none"))
+ })
+
+ /*filtered list following their current status*/
+ readingBtn.addEventListener('click', ()=>{
+  const BookShelfBooks = document.querySelectorAll('.book-card');
+  BookShelfBooks.forEach((book) => book.dataset.status != "Reading" ? book.classList.add("d-none") :  book.classList.remove("d-none"))
+ })
+
+ toReadBtn.addEventListener('click', ()=>{
+  const BookShelfBooks = document.querySelectorAll('.book-card');
+  BookShelfBooks.forEach((book) => book.dataset.status != "To Read" ? book.classList.add("d-none") :  book.classList.remove("d-none"))
+ })
+
+ finishedBtn.addEventListener('click', ()=>{
+  const BookShelfBooks = document.querySelectorAll('.book-card');
+  BookShelfBooks.forEach((book) => book.dataset.status != "Finished" ? book.classList.add("d-none") :  book.classList.remove("d-none"))
+ })
+ 
+ allBtn.addEventListener('click' ,()=>{
+  const BookShelfBooks = document.querySelectorAll('.book-card');
+  BookShelfBooks.forEach((book) => book.classList.remove("d-none"))
+ })
+
+
+ /*Get the form Data*/
 window.addEventListener("DOMContentLoaded", ()=>{
 /*Call the list */
 domBookList()
