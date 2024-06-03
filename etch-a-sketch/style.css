@@ -135,9 +135,11 @@ button , input[type="submit"]{
 }
 
 
+
+
 .container-draw{
-  height:50vw;
-  min-width: 30vw;
+  height:400px;
+ width:400px;
   display: grid;
   overflow: hidden;
 }
@@ -152,7 +154,7 @@ button , input[type="submit"]{
 
   .container-draw{
       height:90vw;
-      min-width: 85vw;
+      min-width: 50%;
   }
     
   
